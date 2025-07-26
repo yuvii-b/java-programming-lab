@@ -34,14 +34,14 @@ public class BankAccount {
     public static void main(String[] args) {
         System.out.println("Name: Yuvaraj B(2024503541) | Week2 | Question1 - BankAccount\n");
 
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter account number: ");
-        int accountNo = sc.nextInt();
+        int accountNo = scanner.nextInt();
         System.out.print("Enter initial balance: ");
-        double balance = sc.nextDouble();
+        double balance = scanner.nextDouble();
         BankAccount bankAccount = new BankAccount(accountNo, balance); // creation of object
         System.out.print("Enter amount to deposit: ");
-        double bal = sc.nextDouble();
+        double bal = scanner.nextDouble();
         bankAccount.deposit(bal);
         System.out.println("Total accounts created: " + BankAccount.totalAccounts);
         bankAccount.display();

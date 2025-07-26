@@ -9,9 +9,9 @@ public class VowelCounter {
         System.out.println("Name: Yuvaraj B(2024503541) | Week2 | Question5 - Vowel Counter\n");
 
         //Input
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string: ");
-        String sentence = sc.nextLine().toLowerCase(); // converted input string to lowercase
+        String sentence = scanner.nextLine().toLowerCase(); // converted input string to lowercase
 
         char[] characters = sentence.toCharArray();
         int[] vowels = new int[5]; // array to keep track of vowel frequencies

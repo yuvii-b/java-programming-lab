@@ -38,14 +38,14 @@ public class UserAuthentication {
     public static void main(String[] args) {
         System.out.println("Name: Yuvaraj B(2024503541) | Week2 | Question3 - Authentication\n");
 
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         UserAuthentication user1 = new UserAuthentication();
         String password, role;
         do{
             System.out.print("Enter the role: ");
-            role = sc.nextLine();
+            role = scanner.nextLine();
             System.out.print("Enter the password: ");
-            password = sc.nextLine();
+            password = scanner.nextLine();
         }while(!user1.authenticate(role, password));
         user1.display();
     }

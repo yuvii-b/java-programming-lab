@@ -48,11 +48,11 @@ public class Patient {
     public static void main(String[] args) {
         System.out.println("Name: Yuvaraj B(2024503541) | Week2 | Question4 - Patient appointment\n");
 
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter patient's age: ");
-        int age = sc.nextInt();
+        int age = scanner.nextInt();
         System.out.print("Enter appointment number: ");
-        int appointmentNumber = sc.nextInt();
+        int appointmentNumber = scanner.nextInt();
 
         Patient patient = new Patient(age, appointmentNumber);
         if(!patient.isEligible()) System.out.println("Patient not eligible for vaccination!");

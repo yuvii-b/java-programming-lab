@@ -8,9 +8,9 @@ public class TrafficLight {
     public static void main(String[] args) {
         System.out.println("Name: Yuvaraj B(2024503541) | Week2 | Question7 - Traffic Light Response\n");
 
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the traffic light colour (red, yellow, green): ");
-        String colour = sc.nextLine().toLowerCase(); // converted to lowercase
+        String colour = scanner.nextLine().toLowerCase(); // converted to lowercase
 
         switch (colour) {
             case "red" -> System.out.println("Stop");

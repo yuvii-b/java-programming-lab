@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Attendance {
 
     private final byte[][] attendance = new byte[5][8]; // 2D array for attendance through the whole week
-    private final Scanner sc = new Scanner(System.in); // scanner obj for input handling
+    private final Scanner scanner = new Scanner(System.in); // scanner obj for input handling
 
     public void takeInput(){
         System.out.println("Enter 1 for present or 0 for absent for each hour of the day");
@@ -15,7 +15,7 @@ public class Attendance {
             System.out.println("Day " + (day + 1));
             for(int hour = 0; hour < attendance[0].length; ++hour){
                 System.out.print("Hour " + (hour + 1) + ": ");
-                attendance[day][hour] = sc.nextByte();
+                attendance[day][hour] = scanner.nextByte();
                 if(attendance[day][hour] != 1 && attendance[day][hour] != 0){
                     System.out.println("Only enter values 0 or 1 !"); // error handling for inputs other than 0 or 1
                     hour--;
