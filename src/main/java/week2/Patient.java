@@ -23,10 +23,10 @@ public class Patient {
         // checks for 3-digit number and assigns priority
         if((int)Math.log10(appointmentNumber) + 1 == 3){
             priority = appointmentNumber % 2 == 0;
+            return true;
         }else{
-            priority = false;
+            return false;
         }
-        return priority;
     }
 
     public void assignSlot(){
@@ -55,12 +55,16 @@ public class Patient {
         int appointmentNumber = scanner.nextInt();
 
         Patient patient = new Patient(age, appointmentNumber);
-        if(!patient.isEligible()) System.out.println("Patient not eligible for vaccination!");
+        if(!patient.isEligible()){
+            System.out.println("Patient not eligible for vaccination!");
+        }
         else{
             if(patient.verifyAppointment()){
                 patient.assignSlot();
                 patient.provideGift();
-            } else System.out.println("Invalid appointment number, must be a 3-digit number"); // invalid input handling
+            } else {
+                System.out.println("Invalid appointment number, must be a 3-digit number"); // invalid input handling
+            }
         }
     }
 }
