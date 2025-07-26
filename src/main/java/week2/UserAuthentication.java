@@ -6,12 +6,13 @@ import java.util.Scanner;
 // Question 3
 public class UserAuthentication {
 
-    static int loginFailures;
-    private String role = "admin";
-    private String password = "password123";
+    static int loginFailures = 0;
+    private final String correctRole = "admin";
+    private final String correctPassword = "password123";
 
     private void incrementFailure(){
         loginFailures++;
+        System.out.println("Login failed, Failure count: " + loginFailures);
     }
 
     public void display() {
@@ -19,18 +20,23 @@ public class UserAuthentication {
     }
 
     public boolean authenticate(String role, String password){
-        if(!this.role.equals(role) && !this.password.equals(password)){ // null pointer exception handled
-            incrementFailure();
-            System.out.println("Enter the correct values");
-            return false;
+        // logs in if both are true
+        if(correctRole.equals(role) && correctPassword.equals(password)){
+            System.out.println("Logged in successfully!");
+            return true;
         }
-        System.out.println("Logged in!");
-        return true;
+        // increments failure count if non-admin log in fails
+        if(!correctRole.equals(role) && !correctPassword.equals(password)){
+            incrementFailure();
+        } else{
+            System.out.println("Incorrect credentials."); // if admin login fails nothing happens
+        }
+        return false;
     }
 
 
     public static void main(String[] args) {
-        System.out.println("Name: Yuvaraj B(2024503541) Question3 - Authentication\n");
+        System.out.println("Name: Yuvaraj B(2024503541) | Week2 | Question3 - Authentication\n");
 
         Scanner sc = new Scanner(System.in);
         UserAuthentication user1 = new UserAuthentication();

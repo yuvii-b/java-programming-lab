@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 // Question 1
 public class BankAccount {
-    static int totalAccounts = 0;
-    private int accountNumber;
+    static int totalAccounts = 0; // static variables
+    // instance variables
+    private final int accountNumber;
     private double balance;
 
     BankAccount(int accountNumber, double balance){
@@ -31,14 +32,14 @@ public class BankAccount {
     }
 
     public static void main(String[] args) {
-        System.out.println("Name: Yuvaraj B(2024503541) Question1 - BankAccount\n");
+        System.out.println("Name: Yuvaraj B(2024503541) | Week2 | Question1 - BankAccount\n");
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter account number: ");
-        int no = sc.nextInt();
-        System.out.print("Enter balance: ");
+        int accountNo = sc.nextInt();
+        System.out.print("Enter initial balance: ");
         double balance = sc.nextDouble();
-        BankAccount bankAccount = new BankAccount(no, balance);
+        BankAccount bankAccount = new BankAccount(accountNo, balance); // creation of object
         System.out.print("Enter amount to deposit: ");
         double bal = sc.nextDouble();
         bankAccount.deposit(bal);
