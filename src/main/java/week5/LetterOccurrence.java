@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class LetterOccurrence {
     public static void main(String[] args) {
+        System.out.println("Name: Yuvaraj B (2024503541) | Week 5 | Question - Letter Frequency\n");
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter a string: ");
